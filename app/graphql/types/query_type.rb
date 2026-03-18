@@ -26,6 +26,13 @@ module Types
       Post.all
     end
 
+    field :post, Types::PostType, null: true, description: "Fetch a post by ID." do
+      argument :id, ID, required: true, description: "ID of the post."
+    end
+    def post(id:)
+      Post.find(id)
+    end
+
     # TODO: remove me
     field :test_field, String, null: false,
       description: "An example field added by the generator"
