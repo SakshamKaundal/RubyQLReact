@@ -1,0 +1,19 @@
+current directory: /home/saksham/Desktop/RubyQLReact/vendor/bundle/ruby/3.4.0/gems/debug-1.11.1/ext/debug
+/usr/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/saksham/Desktop/RubyQLReact/vendor/bundle/ruby/3.4.0/gems/debug-1.11.1/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20260323-127967-9s09s9 sitelibdir\=./.gem.20260323-127967-9s09s9 clean
+
+current directory: /home/saksham/Desktop/RubyQLReact/vendor/bundle/ruby/3.4.0/gems/debug-1.11.1/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20260323-127967-9s09s9 sitelibdir\=./.gem.20260323-127967-9s09s9
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.so
+
+current directory: /home/saksham/Desktop/RubyQLReact/vendor/bundle/ruby/3.4.0/gems/debug-1.11.1/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20260323-127967-9s09s9 sitelibdir\=./.gem.20260323-127967-9s09s9 install
+/usr/bin/install -c -m 0755 debug.so ./.gem.20260323-127967-9s09s9/debug
+
+current directory: /home/saksham/Desktop/RubyQLReact/vendor/bundle/ruby/3.4.0/gems/debug-1.11.1/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20260323-127967-9s09s9 sitelibdir\=./.gem.20260323-127967-9s09s9 clean

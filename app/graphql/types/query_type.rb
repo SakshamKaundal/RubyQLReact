@@ -2,42 +2,9 @@
 
 module Types
   class QueryType < Types::BaseObject
-    field :node, Types::NodeType, null: true, description: "Fetches an object given its ID." do
-      argument :id, ID, required: true, description: "ID of the object."
-    end
-
-    def node(id:)
-      context.schema.object_from_id(id, context)
-    end
-
-    field :nodes, [ Types::NodeType, null: true ], null: true, description: "Fetches a list of objects given a list of IDs." do
-      argument :ids, [ ID ], required: true, description: "IDs of the objects."
-    end
-
-    def nodes(ids:)
-      ids.map { |id| context.schema.object_from_id(id, context) }
-    end
-
-    # Add root-level fields here.
-    # They will be entry points for queries on your schema.
-
-    field :posts, [ Types::PostType ], null: false, description: "Fetch all posts."
-    def posts
-      Post.all
-    end
-
-    field :post, Types::PostType, null: true, description: "Fetch a post by ID." do
-      argument :id, ID, required: true, description: "ID of the post."
-    end
-    def post(id:)
-      Post.find(id)
-    end
-
-    # TODO: remove me
-    field :test_field, String, null: false,
-      description: "An example field added by the generator"
-    def test_field
-      "Hello World!"
-    end
+    field :users, resolver: Resolvers::UsersResolver
+    field :user,  resolver: Resolvers::UserResolver
+    field :posts, resolver: Resolvers::PostsResolver
+    field :post,  resolver: Resolvers::PostResolver
   end
 end
